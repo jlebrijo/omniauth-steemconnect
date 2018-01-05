@@ -30,7 +30,8 @@ module OmniAuth
       end
 
       def request_phase
-        cb_url = URI(callback_url).to_s.gsub("?#{uri.query}",'')
+        uri = URI(callback_url)
+        cb_url = uri.to_s.gsub("?#{uri.query}",'')
         options[:authorize_params] = {
             scope: options['scope']
         }
