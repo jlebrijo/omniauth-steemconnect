@@ -7,9 +7,9 @@ module OmniAuth
   module Strategies
     class Steemconnect < OmniAuth::Strategies::OAuth2
       option :client_options,
-             site: 'https://v2.steemconnect.com/api',
-             authorize_url: 'https://v2.steemconnect.com/oauth2/authorize',
-             token_url: 'https://v2.steemconnect.com/api/oauth2/token'
+             site: 'https://steemconnect.com/api',
+             authorize_url: 'https://steemconnect.com/oauth2/authorize',
+             token_url: 'https://steemconnect.com/api/oauth2/token'
 
       uid { raw_info['user'] }
 
